@@ -1,0 +1,18 @@
+universe   = vanilla
+
+executable = /afs/cern.ch/work/l/llammert/public/xsuite_project/run_lumi_integral.sh
+arguments =  $(script_path)
+output     =  /afs/cern.ch/work/l/llammert/public/xsuite_project/outputs/job_output/job.$(ClusterId).$(ProcId).output
+error      =  /afs/cern.ch/work/l/llammert/public/xsuite_project/error/job.$(ClusterId).$(ProcId).error
+log        = /afs/cern.ch/work/l/llammert/public/xsuite_project/log/job.$(ClusterId).$(ProcId).log
+
+output_destination = /afs/cern.ch/work/l/llammert/public/xsuite_project/outputs/chenying
+should_transfer_files = YES
+when_to_transfer_output= ON_EXIT_OR_EVICT
+
+request_cpus = 8
+
+MY.JobFlavour = "microcentury"
+
+
+queue
